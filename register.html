@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | Dr. PhysioCare Patient Portal</title>
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Password Strength Meter -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/password-strength-meter/2.0.1/password.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-bone"></i>
+                <span class="brand-text">Dr. Physio<span class="brand-highlight">Care</span></span>
+            </a>
+            <div class="navbar-nav ms-auto">
+                <a href="index.html" class="btn btn-outline-primary me-2">Back to Home</a>
+                <a href="login.html" class="btn btn-primary">Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Registration Section -->
+    <section class="registration-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="registration-card" data-aos="fade-up">
+                        <div class="registration-header text-center">
+                            <i class="fas fa-user-plus registration-icon"></i>
+                            <h2>Create Your Account</h2>
+                            <p class="text-muted">Join our patient community and manage your health journey</p>
+                        </div>
+
+                        <form id="registrationForm" class="registration-form">
+                            <!-- Progress Steps -->
+                            <div class="registration-progress">
+                                <div class="step active" data-step="1">
+                                    <div class="step-circle">1</div>
+                                    <div class="step-label">Personal Info</div>
+                                </div>
+                                <div class="step" data-step="2">
+                                    <div class="step-circle">2</div>
+                                    <div class="step-label">Health Details</div>
+                                </div>
+                                <div class="step" data-step="3">
+                                    <div class="step-circle">3</div>
+                                    <div class="step-label">Account Setup</div>
+                                </div>
+                            </div>
+
+                            <!-- Step 1: Personal Information -->
+                            <div class="step-content active" id="step1">
+                                <h4 class="step-title"><i class="fas fa-user me-2"></i>Personal Information</h4>
+                                
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="firstName">First Name *</label>
+                                            <div class="input-group">
+                                                <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                                <input type="text" class="form-control" id="firstName" placeholder="Enter first name" required>
+                                            </div>
+                                            <div class="form-text">As per your official documents</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="lastName">Last Name *</label>
+                                            <div class="input-group">
+                                                <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                                <input type="text" class="form-control" id="lastName" placeholder="Enter last name" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="email">Email Address *</label>
+                                            <div class="input-group">
+                                                <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                                                <input type="email" class="form-control" id="email" placeholder="Enter email address" required>
+                                            </div>
+                                            <div class="form-text">We'll send verification to this email</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="phone">Phone Number *</label>
+                                            <div class="input-group">
+                                                <span class="input-group-text"><i class="fas fa-phone"></i></span>
+                                                <input type="tel" class="form-control" id="phone" placeholder="Enter 10-digit phone number" required pattern="[0-9]{10}">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="dob">Date of Birth *</label>
+                                            <div class="input-group">
+                                                <span class="input-group-text"><i class="fas fa-calendar"></i></span>
+                                                <input type="date" class="form-control" id="dob" max="2023-12-31" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="gender">Gender *</label>
+                                            <div class="input-group">
+                                                <span class="input-group-text"><i class="fas fa-venus-mars"></i></span>
+                                                <select class="form-control" id="gender" required>
+                                                    <option value="">Select Gender</option>
+                                                    <option value="male">Male</option>
+                                                    <option value="female">Female</option>
+                                                    <option value="other">Other</option>
+                                                    <option value="prefer-not-to-say">Prefer not to say</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label for="address">Full Address</label>
+                                            <div class="input-group">
+                                                <span class="input-group-text"><i class="fas fa-home"></i></span>
+                                                <textarea class="form-control" id="address" rows="3" placeholder="Enter your complete address"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="step-buttons">
+                                    <button type="button" class="btn btn-primary next-step" data-next="2">
+                                        Next <i class="fas fa-arrow-right ms-2"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Step 2: Health Information -->
+                            <div class="step-content" id="step2">
+                                <h4 class="step-title"><i class="fas fa-heartbeat me-2"></i>Health Information</h4>
+                                
+                                <div class="form-group mb-4">
+                                    <label>Do you have any existing medical conditions? *</label>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="medicalConditions" id="conditionsYes" value="yes">
+                                        <label class="form-check-label" for="conditionsYes">
+                                            Yes
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="medicalConditions" id="conditionsNo" value="no" checked>
+                                        <label class="form-check-label" for="conditionsNo">
+                                            No
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="form-group mb-4" id="conditionsDetails" style="display: none;">
+                                    <label>Please specify your medical conditions:</label>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-check mb-2">
+                                                <input class="form-check-input condition-check" type="checkbox" id="diabetes" value="diabetes">
+                                                <label class="form-check-label" for="diabetes">
+                                                    Diabetes
+                                                </label>
+                                            </div>
+                                            <div class="form-check mb-2">
+                                                <input class="form-check-input condition-check" type="checkbox" id="hypertension" value="hypertension">
+                                                <label class="form-check-label" for="hypertension">
+                                                    Hypertension (High BP)
+                                                </label>
+                                            </div>
+                                            <div class="form-check mb-2">
+                                                <input class="form-check-input condition-check" type="checkbox" id="arthritis" value="arthritis">
+                                                <label class="form-check-label" for="arthritis">
+                                                    Arthritis
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-check mb-2">
+                                                <input class="form-check-input condition-check" type="checkbox" id="asthma" value="asthma">
+                                                <label class="form-check-label" for="asthma">
+                                                    Asthma
+                                                </label>
+                                            </div>
+                                            <div class="form-check mb-2">
+                                                <input class="form-check-input condition-check" type="checkbox" id="heart" value="heart">
+                                                <label class="form-check-label" for="heart">
+                                                    Heart Condition
+                                                </label>
+                                            </div>
+                                            <div class="form-check mb-2">
+                                                <input class="form-check-input condition-check" type="checkbox" id="otherCondition" value="other">
+                                                <label class="form-check-label" for="otherCondition">
+                                                    Other
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <textarea class="form-control mt-3" id="otherConditions" rows="2" placeholder="Please specify other conditions" style="display: none;"></textarea>
+                                </div>
+
+                                <div class="form-group mb-4">
+                                    <label>Are you currently taking any medications? *</label>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="medications" id="medsYes" value="yes">
+                                        <label class="form-check-label" for="medsYes">
+                                            Yes
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="medications" id="medsNo" value="no" checked>
+                                        <label class="form-check-label" for="medsNo">
+                                            No
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="form-group mb-4" id="medicationDetails" style="display: none;">
+                                    <label>Please list your medications:</label>
+                                    <textarea class="form-control" id="medicationsList" rows="3" placeholder="List medications with dosage"></textarea>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="healthConcerns">Primary Health Concern</label>
+                                    <select class="form-control" id="healthConcerns">
+                                        <option value="">Select primary concern</option>
+                                        <option value="back-pain">Back Pain</option>
+                                        <option value="neck-pain">Neck Pain</option>
+                                        <option value="joint-pain">Joint Pain</option>
+                                        <option value="sports-injury">Sports Injury</option>
+                                        <option value="post-surgical">Post-Surgical Recovery</option>
+                                        <option value="neurological">Neurological Condition</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                    <textarea class="form-control mt-3" id="otherConcerns" rows="2" placeholder="Please describe your health concern" style="display: none;"></textarea>
+                                </div>
+
+                                <div class="step-buttons">
+                                    <button type="button" class="btn btn-outline-secondary prev-step" data-prev="1">
+                                        <i class="fas fa-arrow-left me-2"></i> Back
+                                    </button>
+                                    <button type="button" class="btn btn-primary next-step" data-next="3">
+                                        Next <i class="fas fa-arrow-right ms-2"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Step 3: Account Setup -->
+                            <div class="step-content" id="step3">
+                                <h4 class="step-title"><i class="fas fa-lock me-2"></i>Account Setup</h4>
+                                
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="password">Create Password *</label>
+                                            <div class="input-group">
+                                                <span class="input-group-text"><i class="fas fa-key"></i></span>
+                                                <input type="password" class="form-control" id="password" placeholder="Create strong password" required>
+                                                <button class="btn btn-outline-secondary toggle-password" type="button">
+                                                    <i class="fas fa-eye"></i>
+                                                </button>
+                                            </div>
+                                            <div class="password-strength mt-2">
+                                                <div class="progress" style="height: 5px;">
+                                                    <div class="progress-bar" id="passwordStrength" role="progressbar" style="width: 0%"></div>
+                                                </div>
+                                                <small class="text-muted" id="passwordFeedback">Password strength</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="confirmPassword">Confirm Password *</label>
+                                            <div class="input-group">
+                                                <span class="input-group-text"><i class="fas fa-key"></i></span>
+                                                <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm your password" required>
+                                                <button class="btn btn-outline-secondary toggle-password" type="button">
+                                                    <i class="fas fa-eye"></i>
+                                                </button>
+                                            </div>
+                                            <div class="form-text" id="passwordMatch"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group mb-4">
+                                    <label for="securityQuestion">Security Question *</label>
+                                    <select class="form-control" id="securityQuestion" required>
+                                        <option value="">Select a security question</option>
+                                        <option value="pet">What was your first pet's name?</option>
+                                        <option value="school">What was the name of your first school?</option>
+                                        <option value="city">In which city were you born?</option>
+                                        <option value="mother">What is your mother's maiden name?</option>
+                                        <option value="car">What was your first car's model?</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="securityAnswer">Security Answer *</label>
+                                    <input type="text" class="form-control" id="securityAnswer" placeholder="Enter your answer" required>
+                                </div>
+
+                                <div class="form-check mt-4">
+                                    <input class="form-check-input" type="checkbox" id="terms" required>
+                                    <label class="form-check-label" for="terms">
+                                        I agree to the <a href="#" data-bs-toggle="modal" data-bs-target="#termsModal">Terms & Conditions</a> and <a href="#" data-bs-toggle="modal" data-bs-target="#privacyModal">Privacy Policy</a> *
+                                    </label>
+                                </div>
+
+                                <div class="form-check mb-4">
+                                    <input class="form-check-input" type="checkbox" id="newsletter">
+                                    <label class="form-check-label" for="newsletter">
+                                        Subscribe to newsletter for health tips and updates
+                                    </label>
+                                </div>
+
+                                <div class="step-buttons">
+                                    <button type="button" class="btn btn-outline-secondary prev-step" data-prev="2">
+                                        <i class="fas fa-arrow-left me-2"></i> Back
+                                    </button>
+                                    <button type="submit" class="btn btn-success" id="submitRegistration">
+                                        <i class="fas fa-user-plus me-2"></i> Create Account
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Quick Registration Option -->
+                            <div class="text-center mt-4">
+                                <div class="divider">
+                                    <span>or register quickly with</span>
+                                </div>
+                                
+                                <div class="social-registration">
+                                    <button type="button" class="btn btn-outline-primary social-btn google-register">
+                                        <i class="fab fa-google"></i> Google
+                                    </button>
+                                    <button type="button" class="btn btn-outline-primary social-btn facebook-register">
+                                        <i class="fab fa-facebook-f"></i> Facebook
+                                    </button>
+                                    <button type="button" class="btn btn-outline-primary social-btn whatsapp-register">
+                                        <i class="fab fa-whatsapp"></i> WhatsApp
+                                    </button>
+                                </div>
+
+                                <p class="mt-4">
+                                    Already have an account? <a href="login.html" class="fw-bold">Login here</a>
+                                </p>
+                            </div>
+                        </form>
+
+                        <!-- Benefits Card -->
+                        <div class="benefits-card mt-5" data-aos="fade-up">
+                            <h5><i class="fas fa-star me-2 text-warning"></i> Benefits of Registration</h5>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="benefit-item">
+                                        <i class="fas fa-calendar-check"></i>
+                                        <h6>Easy Appointments</h6>
+                                        <p>Book and manage appointments online</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="benefit-item">
+                                        <i class="fas fa-file-medical"></i>
+                                        <h6>Health Records</h6>
+                                        <p>Access your treatment history anytime</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="benefit-item">
+                                        <i class="fas fa-bell"></i>
+                                        <h6>Reminders</h6>
+                                        <p>Get appointment and medication reminders</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Terms & Conditions Modal -->
+    <div class="modal fade" id="termsModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Terms & Conditions</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>1. Acceptance of Terms</h6>
+                    <p>By registering with Dr. PhysioCare, you agree to these terms and conditions.</p>
+                    
+                    <h6>2. Patient Responsibilities</h6>
+                    <p>You agree to provide accurate health information and follow treatment plans.</p>
+                    
+                    <h6>3. Appointment Policy</h6>
+                    <p>Cancellations must be made 24 hours in advance. Late arrivals may result in shortened sessions.</p>
+                    
+                    <h6>4. Privacy</h6>
+                    <p>Your health information is confidential and protected under HIPAA guidelines.</p>
+                    
+                    <h6>5. Payment Terms</h6>
+                    <p>Payment is due at the time of service unless otherwise arranged.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">I Understand</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Privacy Policy Modal -->
+    <div class="modal fade" id="privacyModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Privacy Policy</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>1. Information Collection</h6>
+                    <p>We collect personal and health information necessary for your treatment.</p>
+                    
+                    <h6>2. Use of Information</h6>
+                    <p>Your information is used solely for treatment, billing, and appointment management.</p>
+                    
+                    <h6>3. Data Security</h6>
+                    <p>We implement industry-standard security measures to protect your data.</p>
+                    
+                    <h6>4. Third-Party Sharing</h6>
+                    <p>We do not share your information without your consent, except as required by law.</p>
+                    
+                    <h6>5. Your Rights</h6>
+                    <p>You have the right to access and correct your health information.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">I Understand</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer mt-5">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2024 Dr. PhysioCare. All Rights Reserved.</p>
+                <p class="disclaimer">Secure patient registration portal - Your health information is protected</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/password-strength-meter/2.0.1/password.min.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/registration.js"></script>
+    
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+
+        // Initialize registration system
+        const registrationSystem = new RegistrationSystem();
+    </script>
+</body>
+</html>

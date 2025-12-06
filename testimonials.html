@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Testimonials | Dr. PhysioCare - Success Stories</title>
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Slick Carousel -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+</head>
+<body>
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/919876543210?text=Hello%20Dr.%20PhysioCare,%20I%20would%20like%20to%20book%20an%20appointment" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-bone"></i>
+                <span class="brand-text">Dr. Physio<span class="brand-highlight">Care</span></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="testimonials.html">Testimonials</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="authDropdown" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-user-circle"></i> Account
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="login.html"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+                            <li><a class="dropdown-item" href="register.html"><i class="fas fa-user-plus"></i> Register</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="appointment.html#myAppointments"><i class="fas fa-calendar-check"></i> My Appointments</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="appointment.html" class="btn btn-appointment-nav">Book Appointment</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Testimonials Hero -->
+    <section class="testimonials-hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h1 class="hero-title">Success Stories That Inspire</h1>
+                    <p class="hero-subtitle">Real patients, real results. Read inspiring stories of recovery and transformation from our satisfied patients.</p>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <h3>4.9</h3>
+                            <p>Average Rating</p>
+                        </div>
+                        <div class="stat">
+                            <h3>500+</h3>
+                            <p>5-Star Reviews</p>
+                        </div>
+                        <div class="stat">
+                            <h3>98%</h3>
+                            <p>Patient Satisfaction</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="testimonial-hero-image">
+                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Patient Recovery" class="img-fluid rounded-3">
+                        <div class="floating-testimonial">
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p>"Life-changing experience! Back to normal in 6 weeks."</p>
+                            <span>- Rajesh Kumar</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial Filters -->
+    <section class="testimonial-filters">
+        <div class="container">
+            <div class="filter-container" data-aos="fade-up">
+                <h4 class="filter-title">Filter Testimonials</h4>
+                <div class="row">
+                    <div class="col-md-3">
+                        <select class="form-control filter-select" id="filterService">
+                            <option value="all">All Services</option>
+                            <option value="sports">Sports Injury</option>
+                            <option value="pain">Pain Management</option>
+                            <option value="post-surgical">Post-Surgical</option>
+                            <option value="neurological">Neurological</option>
+                            <option value="pediatric">Pediatric</option>
+                            <option value="home-visit">Home Visit</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <select class="form-control filter-select" id="filterRating">
+                            <option value="all">All Ratings</option>
+                            <option value="5">5 Stars</option>
+                            <option value="4">4+ Stars</option>
+                            <option value="3">3+ Stars</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <select class="form-control filter-select" id="filterRecovery">
+                            <option value="all">All Recovery Types</option>
+                            <option value="full">Full Recovery</option>
+                            <option value="partial">Significant Improvement</option>
+                            <option value="ongoing">Ongoing Treatment</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <button class="btn btn-primary w-100" id="applyFilters">
+                            <i class="fas fa-filter"></i> Apply Filters
+                        </button>
+                    </div>
+                </div>
+                <div class="text-center mt-3">
+                    <button class="btn btn-outline-primary" id="resetFilters">
+                        <i class="fas fa-redo"></i> Reset Filters
+                    </button>
+                    <button class="btn btn-outline-success" id="addTestimonial" data-bs-toggle="modal" data-bs-target="#addTestimonialModal">
+                        <i class="fas fa-plus"></i> Add Your Testimonial
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Grid -->
+    <section class="testimonials-grid">
+        <div class="container">
+            <div class="row">
+                <!-- Featured Testimonial -->
+                <div class="col-lg-12 mb-5" data-aos="fade-up">
+                    <div class="featured-testimonial">
+                        <div class="row align-items-center">
+                            <div class="col-lg-3">
+                                <div class="featured-patient">
+                                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Rajesh Kumar">
+                                    <div class="patient-info">
+                                        <h5>Rajesh Kumar</h5>
+                                        <span>Professional Athlete</span>
+                                        <div class="rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-9">
+                                <div class="featured-content">
+                                    <h4><i class="fas fa-trophy text-warning me-2"></i> Featured Success Story</h4>
+                                    <p class="testimonial-text">"After a severe ACL injury during a national tournament, I thought my sports career was over. Dr. PhysioCare not only helped me recover but also improved my performance. The personalized rehabilitation program, combined with advanced therapies, got me back on the field in just 6 weeks. Today, I'm playing better than ever!"</p>
+                                    <div class="testimonial-details">
+                                        <span class="badge bg-primary">Sports Injury</span>
+                                        <span class="badge bg-success">Full Recovery</span>
+                                        <span class="badge bg-info">6 Weeks Treatment</span>
+                                    </div>
+                                    <div class="testimonial-footer">
+                                        <small><i class="fas fa-calendar me-1"></i> Treated: March 2023</small>
+                                        <small><i class="fas fa-map-marker-alt me-1"></i> Delhi, India</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonials Grid -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up">
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Priya Sharma">
+                            <div class="patient-info">
+                                <h5>Priya Sharma</h5>
+                                <span>Software Engineer</span>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-content">
+                            <p>"Chronic back pain from sitting for long hours had made my life miserable. Dr. PhysioCare's ergonomic assessment and targeted exercises completely eliminated my pain. I can now work 10+ hours without any discomfort!"</p>
+                        </div>
+                        <div class="testimonial-details">
+                            <span class="badge bg-primary">Back Pain</span>
+                            <span class="badge bg-success">Full Recovery</span>
+                        </div>
+                        <div class="testimonial-footer">
+                            <small><i class="fas fa-calendar me-1"></i> Treated: January 2023</small>
+                            <small><i class="fas fa-thumbs-up me-1"></i> 24 people found this helpful</small>
+                        </div>
+                        <button class="btn-helpful" data-testimonial="1">
+                            <i class="far fa-thumbs-up"></i> Helpful
+                        </button>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <img src="https://randomuser.me/api/portraits/men/65.jpg" alt="Amit Patel">
+                            <div class="patient-info">
+                                <h5>Amit Patel</h5>
+                                <span>Business Owner</span>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-content">
+                            <p>"The home visit service was a blessing for my 80-year-old father after his hip replacement. The therapist was punctual, professional, and extremely caring. My father regained mobility much faster than expected."</p>
+                        </div>
+                        <div class="testimonial-details">
+                            <span class="badge bg-primary">Home Visit</span>
+                            <span class="badge bg-warning">Post-Surgical</span>
+                        </div>
+                        <div class="testimonial-footer">
+                            <small><i class="fas fa-calendar me-1"></i> Treated: December 2022</small>
+                            <small><i class="fas fa-thumbs-up me-1"></i> 18 people found this helpful</small>
+                        </div>
+                        <button class="btn-helpful" data-testimonial="2">
+                            <i class="far fa-thumbs-up"></i> Helpful
+                        </button>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <img src="https://randomuser.me/api/portraits/women/28.jpg" alt="Neha Verma">
+                            <div class="patient-info">
+                                <h5>Neha Verma</h5>
+                                <span>Teacher</span>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-content">
+                            <p>"Suffered from severe neck pain for years. Tried multiple treatments with no relief. Within 4 weeks of starting physiotherapy at Dr. PhysioCare, my pain reduced by 90%. The dry needling treatment was particularly effective."</p>
+                        </div>
+                        <div class="testimonial-details">
+                            <span class="badge bg-primary">Neck Pain</span>
+                            <span class="badge bg-success">90% Recovery</span>
+                        </div>
+                        <div class="testimonial-footer">
+                            <small><i class="fas fa-calendar me-1"></i> Treated: February 2023</small>
+                            <small><i class="fas fa-thumbs-up me-1"></i> 32 people found this helpful</small>
+                        </div>
+                        <button class="btn-helpful" data-testimonial="3">
+                            <i class="far fa-thumbs-up"></i> Helpful
+                        </button>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up">
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Rahul Singh">
+                            <div class="patient-info">
+                                <h5>Rahul Singh</h5>
+                                <span>Marathon Runner</span>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-content">
+                            <p>"Plantar fasciitis was preventing me from running. Dr. PhysioCare's shockwave therapy combined with custom orthotics completely resolved the issue. I successfully completed my first marathon 3 months after treatment!"</p>
+                        </div>
+                        <div class="testimonial-details">
+                            <span class="badge bg-primary">Sports Injury</span>
+                            <span class="badge bg-success">Full Recovery</span>
+                        </div>
+                        <div class="testimonial-footer">
+                            <small><i class="fas fa-calendar me-1"></i> Treated: November 2022</small>
+                            <small><i class="fas fa-thumbs-up me-1"></i> 15 people found this helpful</small>
+                        </div>
+                        <button class="btn-helpful" data-testimonial="4">
+                            <i class="far fa-thumbs-up"></i> Helpful
+                        </button>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Sunita Reddy">
+                            <div class="patient-info">
+                                <h5>Sunita Reddy</h5>
+                                <span>Homemaker</span>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-content">
+                            <p>"After a stroke, I lost movement in my right side. The neurological rehabilitation program helped me regain most of my functions. The therapists were incredibly patient and motivating throughout the journey."</p>
+                        </div>
+                        <div class="testimonial-details">
+                            <span class="badge bg-primary">Neurological</span>
+                            <span class="badge bg-info">Significant Improvement</span>
+                        </div>
+                        <div class="testimonial-footer">
+                            <small><i class="fas fa-calendar me-1"></i> Treated: October 2022</small>
+                            <small><i class="fas fa-thumbs-up me-1"></i> 28 people found this helpful</small>
+                        </div>
+                        <button class="btn-helpful" data-testimonial="5">
+                            <i class="far fa-thumbs-up"></i> Helpful
+                        </button>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <img src="https://randomuser.me/api/portraits/men/55.jpg" alt="Vikram Malhotra">
+                            <div class="patient-info">
+                                <h5>Vikram Malhotra</h5>
+                                <span>Bank Manager</span>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-content">
+                            <p>"Frozen shoulder made daily activities impossible. The combination of manual therapy and specific exercises provided remarkable relief. Now I can move my arm freely without pain."</p>
+                        </div>
+                        <div class="testimonial-details">
+                            <span class="badge bg-primary">Shoulder Pain</span>
+                            <span class="badge bg-success">Full Recovery</span>
+                        </div>
+                        <div class="testimonial-footer">
+                            <small><i class="fas fa-calendar me-1"></i> Treated: September 2022</small>
+                            <small><i class="fas fa-thumbs-up me-1"></i> 21 people found this helpful</small>
+                        </div>
+                        <button class="btn-helpful" data-testimonial="6">
+                            <i class="far fa-thumbs-up"></i> Helpful
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Load More Button -->
+            <div class="text-center mt-5" data-aos="fade-up">
+                <button class="btn btn-primary btn-lg" id="loadMoreTestimonials">
+                    <i class="fas fa-plus-circle me-2"></i> Load More Testimonials
+                </button>
+                <p class="text-muted mt-2">Showing 7 of 500+ testimonials</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Testimonials -->
+    <section class="video-testimonials">
+        <div class="container">
+            <h2 class="section-title text-center" data-aos="fade-up">Video Testimonials</h2>
+            <p class="section-subtitle text-center" data-aos="fade-up">Watch our patients share their recovery journeys</p>
+            
+            <div class="video-grid">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up">
+                        <div class="video-card">
+                            <div class="video-thumbnail">
+                                <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Video Thumbnail">
+                                <div class="play-button">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                            <div class="video-info">
+                                <h5>Sports Injury Recovery Story</h5>
+                                <p>Rajesh shares his journey from ACL injury to returning to professional sports</p>
+                                <div class="video-meta">
+                                    <span><i class="fas fa-clock"></i> 3:45</span>
+                                    <span><i class="fas fa-eye"></i> 1.2K views</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="video-card">
+                            <div class="video-thumbnail">
+                                <img src="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Video Thumbnail">
+                                <div class="play-button">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                            <div class="video-info">
+                                <h5>Chronic Back Pain Relief</h5>
+                                <p>Priya explains how she overcame years of back pain</p>
+                                <div class="video-meta">
+                                    <span><i class="fas fa-clock"></i> 4:20</span>
+                                    <span><i class="fas fa-eye"></i> 980 views</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                        <div class="video-card">
+                            <div class="video-thumbnail">
+                                <img src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Video Thumbnail">
+                                <div class="play-button">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                            <div class="video-info">
+                                <h5>Home Visit Experience</h5>
+                                <p>Amit shares his family's experience with home physiotherapy</p>
+                                <div class="video-meta">
+                                    <span><i class="fas fa-clock"></i> 5:15</span>
+                                    <span><i class="fas fa-eye"></i> 1.5K views</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Before & After Gallery -->
+    <section class="before-after-section">
+        <div class="container">
+            <h2 class="section-title text-center" data-aos="fade-up">Recovery Progress</h2>
+            <p class="section-subtitle text-center" data-aos="fade-up">Visual proof of transformation and healing</p>
+            
+            <div class="before-after-slider" data-aos="fade-up">
+                <div class="ba-item">
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <div class="ba-image">
+                                <div class="image-container">
+                                    <div class="before">
+                                        <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Before Treatment">
+                                        <div class="label">Before</div>
+                                    </div>
+                                    <div class="after">
+                                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="After Treatment">
+                                        <div class="label">After 6 Weeks</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="ba-content">
+                                <h4>Knee Injury Recovery</h4>
+                                <div class="patient-info">
+                                    <strong>Patient:</strong> Rohan Mehta, 28 years
+                                    <br>
+                                    <strong>Condition:</strong> ACL Tear + Meniscus Injury
+                                    <br>
+                                    <strong>Treatment Duration:</strong> 8 Weeks
+                                </div>
+                                <p>"Unable to walk without support before treatment. After 8 weeks of intensive physiotherapy, I can run and play sports again!"</p>
+                                <div class="progress-stats">
+                                    <div class="progress-item">
+                                        <span>Pain Reduction</span>
+                                        <div class="progress">
+                                            <div class="progress-bar bg-success" style="width: 95%">95%</div>
+                                        </div>
+                                    </div>
+                                    <div class="progress-item">
+                                        <span>Mobility Recovery</span>
+                                        <div class="progress">
+                                            <div class="progress-bar bg-info" style="width: 90%">90%</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="ba-item">
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <div class="ba-image">
+                                <div class="image-container">
+                                    <div class="before">
+                                        <img src="https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Before Treatment">
+                                        <div class="label">Before</div>
+                                    </div>
+                                    <div class="after">
+                                        <img src="https://images.unsplash.com/photo-1598974357801-cbca100e5d10?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="After Treatment">
+                                        <div class="label">After 4 Weeks</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="ba-content">
+                                <h4>Shoulder Pain Recovery</h4>
+                                <div class="patient-info">
+                                    <strong>Patient:</strong> Anita Desai, 45 years
+                                    <br>
+                                    <strong>Condition:</strong> Frozen Shoulder
+                                    <br>
+                                    <strong>Treatment Duration:</strong> 4 Weeks
+                                </div>
+                                <p>"Couldn't lift my arm above shoulder level. After treatment, full range of motion restored with zero pain!"</p>
+                                <div class="progress-stats">
+                                    <div class="progress-item">
+                                        <span>Pain Reduction</span>
+                                        <div class="progress">
+                                            <div class="progress-bar bg-success" style="width: 100%">100%</div>
+                                        </div>
+                                    </div>
+                                    <div class="progress-item">
+                                        <span>Range of Motion</span>
+                                        <div class="progress">
+                                            <div class="progress-bar bg-info" style="width: 95%">95%</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="testimonial-stats">
+        <div class="container">
+            <div class="stats-grid" data-aos="fade-up">
+                <div class="row">
+                    <div class="col-md-3 col-6">
+                        <div class="stat-card">
+                            <i class="fas fa-smile"></i>
+                            <h3>500+</h3>
+                            <p>Happy Patients</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="stat-card">
+                            <i class="fas fa-star"></i>
+                            <h3>4.9/5</h3>
+                            <p>Average Rating</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="stat-card">
+                            <i class="fas fa-check-circle"></i>
+                            <h3>98%</h3>
+                            <p>Success Rate</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="stat-card">
+                            <i class="fas fa-award"></i>
+                            <h3>25+</h3>
+                            <p>Awards & Recognition</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Submit Testimonial CTA -->
+    <section class="submit-testimonial">
+        <div class="container">
+            <div class="cta-card" data-aos="fade-up">
+                <div class="row align-items-center">
+                    <div class="col-lg-8">
+                        <h3>Share Your Success Story</h3>
+                        <p>Help others by sharing your journey to recovery. Your story could inspire someone to take the first step towards healing.</p>
+                    </div>
+                    <div class="col-lg-4 text-end">
+                        <button class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#addTestimonialModal">
+                            <i class="fas fa-edit me-2"></i> Write a Testimonial
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="footer-brand">
+                        <i class="fas fa-bone"></i>
+                        <span>Dr. Physio<span class="brand-highlight">Care</span></span>
+                    </div>
+                    <p class="footer-about">Providing expert physiotherapy services with compassion and evidence-based treatment approaches for over 15 years.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-telegram"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5>Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="testimonials.html">Testimonials</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5>Our Services</h5>
+                    <ul class="footer-links">
+                        <li><a href="services.html#sports">Sports Injury</a></li>
+                        <li><a href="services.html#pain">Pain Management</a></li>
+                        <li><a href="services.html#post-surgical">Post-Surgical Rehab</a></li>
+                        <li><a href="services.html#neurological">Neurological Rehab</a></li>
+                        <li><a href="services.html#home">Home Visits</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h5>Contact Info</h5>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Health Street, Medical City</p>
+                        <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                        <p><i class="fas fa-envelope"></i> info@drphysiocare.com</p>
+                        <p><i class="fas fa-clock"></i> Mon-Sat: 9AM-8PM</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Dr. PhysioCare. All Rights Reserved.</p>
+                <p class="disclaimer">Real patient testimonials - Results may vary based on individual conditions</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Add Testimonial Modal -->
+    <div class="modal fade" id="addTestimonialModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"><i class="fas fa-edit me-2"></i>Share Your Experience</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="testimonialForm">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="yourName">Your Name *</label>
+                                    <input type="text" class="form-control" id="yourName" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="yourAge">Age</label>
+                                    <input type="number" class="form-control" id="yourAge" min="1" max="120">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="yourEmail">Email Address *</label>
+                                    <input type="email" class="form-control" id="yourEmail" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="yourPhone">Phone Number</label>
+                                    <input type="tel" class="form-control" id="yourPhone">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="treatmentType">Type of Treatment *</label>
+                                    <select class="form-control" id="treatmentType" required>
+                                        <option value="">Select Treatment</option>
+                                        <option value="sports">Sports Injury</option>
+                                        <option value="pain">Pain Management</option>
+                                        <option value="post-surgical">Post-Surgical</option>
+                                        <option value="neurological">Neurological</option>
+                                        <option value="pediatric">Pediatric</option>
+                                        <option value="home-visit">Home Visit</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="recoveryStatus">Recovery Status *</label>
+                                    <select class="form-control" id="recoveryStatus" required>
+                                        <option value="">Select Status</option>
+                                        <option value="full">Full Recovery</option>
+                                        <option value="significant">Significant Improvement</option>
+                                        <option value="partial">Partial Improvement</option>
+                                        <option value="ongoing">Ongoing Treatment</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label for="testimonialTitle">Testimonial Title *</label>
+                                    <input type="text" class="form-control" id="testimonialTitle" placeholder="e.g., Life-changing treatment!" required>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label for="testimonialText">Your Testimonial *</label>
+                                    <textarea class="form-control" id="testimonialText" rows="6" placeholder="Share your experience in detail..." required></textarea>
+                                    <small class="form-text">Share your journey, treatment experience, results, and how it impacted your life.</small>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label>Rate Your Experience *</label>
+                                    <div class="rating-input">
+                                        <div class="stars">
+                                            <i class="far fa-star" data-rating="1"></i>
+                                            <i class="far fa-star" data-rating="2"></i>
+                                            <i class="far fa-star" data-rating="3"></i>
+                                            <i class="far fa-star" data-rating="4"></i>
+                                            <i class="far fa-star" data-rating="5"></i>
+                                        </div>
+                                        <input type="hidden" id="ratingValue" value="0" required>
+                                        <div class="rating-labels">
+                                            <span>Poor</span>
+                                            <span>Fair</span>
+                                            <span>Good</span>
+                                            <span>Very Good</span>
+                                            <span>Excellent</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="consentPhoto" value="1">
+                                    <label class="form-check-label" for="consentPhoto">
+                                        I consent to use my testimonial and photo on the website (optional)
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="contactMe" value="1">
+                                    <label class="form-check-label" for="contactMe">
+                                        You may contact me for follow-up or verification
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary" id="submitTestimonial">Submit Testimonial</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Video Modal -->
+    <div class="modal fade" id="videoModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Patient Testimonial</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="ratio ratio-16x9">
+                        <iframe id="testimonialVideo" src="" title="Patient Testimonial" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/testimonials.js"></script>
+    
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+
+        // Initialize testimonial system
+        const testimonialSystem = new TestimonialSystem();
+    </script>
+</body>
+</html>

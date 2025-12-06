@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment | Dr. PhysioCare - Schedule Your Session</title>
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- FullCalendar CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/919876543210?text=Hello%20Dr.%20PhysioCare,%20I%20would%20like%20to%20book%20an%20appointment" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-bone"></i>
+                <span class="brand-text">Dr. Physio<span class="brand-highlight">Care</span></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="testimonials.html">Testimonials</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="authDropdown" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-user-circle"></i> Account
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="login.html"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+                            <li><a class="dropdown-item" href="register.html"><i class="fas fa-user-plus"></i> Register</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#myAppointments"><i class="fas fa-calendar-check"></i> My Appointments</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#appointmentForm" class="btn btn-appointment-nav">Book Now</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Appointment Hero -->
+    <section class="appointment-hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h1 class="hero-title">Schedule Your Healing Journey</h1>
+                    <p class="hero-subtitle">Book your physiotherapy session with our expert team. Flexible timings, personalized care, and guaranteed results.</p>
+                    
+                    <div class="appointment-features">
+                        <div class="feature-item">
+                            <i class="fas fa-clock"></i>
+                            <span>Same-day appointments available</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-home"></i>
+                            <span>Home visit services</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>100% safe & hygienic</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="appointment-cta">
+                        <div class="cta-card">
+                            <h4>Need Immediate Help?</h4>
+                            <p>Contact us for emergency appointments</p>
+                            <div class="cta-contact">
+                                <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                                <p><i class="fas fa-whatsapp"></i> +91 98765 43210</p>
+                            </div>
+                            <a href="tel:+919876543210" class="btn btn-danger btn-lg w-100">
+                                <i class="fas fa-phone-alt"></i> Call Now for Emergency
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Appointment Booking Section -->
+    <section id="appointmentForm" class="appointment-booking-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="appointment-main-card" data-aos="fade-up">
+                        <!-- Step Navigation -->
+                        <div class="appointment-steps">
+                            <div class="step active" data-step="1">
+                                <div class="step-number">1</div>
+                                <div class="step-label">Select Service</div>
+                            </div>
+                            <div class="step" data-step="2">
+                                <div class="step-number">2</div>
+                                <div class="step-label">Choose Date & Time</div>
+                            </div>
+                            <div class="step" data-step="3">
+                                <div class="step-number">3</div>
+                                <div class="step-label">Patient Details</div>
+                            </div>
+                            <div class="step" data-step="4">
+                                <div class="step-number">4</div>
+                                <div class="step-label">Confirmation</div>
+                            </div>
+                        </div>
+
+                        <!-- Step 1: Service Selection -->
+                        <div class="step-content active" id="step1-content">
+                            <h4 class="step-title">Select Treatment Type</h4>
+                            <p class="step-subtitle">Choose the service that best matches your needs</p>
+                            
+                            <div class="service-selection">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="service-option" data-service="consultation">
+                                            <div class="service-icon">
+                                                <i class="fas fa-stethoscope"></i>
+                                            </div>
+                                            <h5>Initial Consultation</h5>
+                                            <p>Comprehensive assessment and treatment plan</p>
+                                            <div class="service-price">₹1000</div>
+                                            <div class="service-duration">60 mins</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="service-option" data-service="sports">
+                                            <div class="service-icon">
+                                                <i class="fas fa-running"></i>
+                                            </div>
+                                            <h5>Sports Injury</h5>
+                                            <p>Specialized rehabilitation for athletes</p>
+                                            <div class="service-price">₹1500</div>
+                                            <div class="service-duration">60 mins</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="service-option" data-service="pain">
+                                            <div class="service-icon">
+                                                <i class="fas fa-user-injured"></i>
+                                            </div>
+                                            <h5>Pain Management</h5>
+                                            <p>Chronic pain relief and management</p>
+                                            <div class="service-price">₹1200</div>
+                                            <div class="service-duration">45 mins</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="service-option" data-service="post-surgical">
+                                            <div class="service-icon">
+                                                <i class="fas fa-wheelchair"></i>
+                                            </div>
+                                            <h5>Post-Surgical Rehab</h5>
+                                            <p>Recovery after surgical procedures</p>
+                                            <div class="service-price">₹1800</div>
+                                            <div class="service-duration">60 mins</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="service-option" data-service="neurological">
+                                            <div class="service-icon">
+                                                <i class="fas fa-brain"></i>
+                                            </div>
+                                            <h5>Neurological Rehab</h5>
+                                            <p>Stroke, Parkinson's, neurological conditions</p>
+                                            <div class="service-price">₹2000</div>
+                                            <div class="service-duration">60 mins</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="service-option" data-service="home-visit">
+                                            <div class="service-icon">
+                                                <i class="fas fa-home"></i>
+                                            </div>
+                                            <h5>Home Visit</h5>
+                                            <p>Treatment at your doorstep</p>
+                                            <div class="service-price">₹2500</div>
+                                            <div class="service-duration">60 mins</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="step-buttons">
+                                <button type="button" class="btn btn-primary next-step" data-next="2">
+                                    Next: Choose Time <i class="fas fa-arrow-right ms-2"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Step 2: Date & Time Selection -->
+                        <div class="step-content" id="step2-content">
+                            <h4 class="step-title">Select Date & Time</h4>
+                            <p class="step-subtitle">Choose your preferred appointment slot</p>
+                            
+                            <div class="date-time-selection">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="calendar-container">
+                                            <div id="calendar"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="time-slots-container">
+                                            <h6>Available Time Slots</h6>
+                                            <div class="date-display" id="selectedDateDisplay">
+                                                Select a date first
+                                            </div>
+                                            
+                                            <div class="time-slots" id="timeSlots">
+                                                <!-- Time slots will be dynamically generated -->
+                                                <p class="text-muted">Please select a date to view available time slots</p>
+                                            </div>
+                                            
+                                            <div class="slot-info">
+                                                <i class="fas fa-info-circle"></i>
+                                                <small>Morning slots: 9 AM - 12 PM | Afternoon slots: 2 PM - 5 PM</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="step-buttons">
+                                <button type="button" class="btn btn-outline-secondary prev-step" data-prev="1">
+                                    <i class="fas fa-arrow-left me-2"></i> Back
+                                </button>
+                                <button type="button" class="btn btn-primary next-step" data-next="3">
+                                    Next: Patient Details <i class="fas fa-arrow-right ms-2"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Patient Details -->
+                        <div class="step-content" id="step3-content">
+                            <h4 class="step-title">Patient Information</h4>
+                            <p class="step-subtitle">Tell us about yourself for personalized care</p>
+                            
+                            <div class="patient-form">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="patientName">Full Name *</label>
+                                            <input type="text" class="form-control" id="patientName" placeholder="Enter your full name" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="patientAge">Age *</label>
+                                            <input type="number" class="form-control" id="patientAge" min="1" max="120" placeholder="Enter age" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="patientPhone">Phone Number *</label>
+                                            <input type="tel" class="form-control" id="patientPhone" placeholder="Enter 10-digit number" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="patientEmail">Email Address *</label>
+                                            <input type="email" class="form-control" id="patientEmail" placeholder="Enter email address" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="patientGender">Gender *</label>
+                                            <select class="form-control" id="patientGender" required>
+                                                <option value="">Select Gender</option>
+                                                <option value="male">Male</option>
+                                                <option value="female">Female</option>
+                                                <option value="other">Other</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="visitType">Visit Type *</label>
+                                            <select class="form-control" id="visitType" required>
+                                                <option value="">Select Type</option>
+                                                <option value="clinic">Clinic Visit</option>
+                                                <option value="home">Home Visit</option>
+                                                <option value="online">Online Consultation</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <label for="patientAddress">Address (for home visits)</label>
+                                            <textarea class="form-control" id="patientAddress" rows="3" placeholder="Enter complete address for home visits"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <label for="healthConcern">Health Concern *</label>
+                                            <textarea class="form-control" id="healthConcern" rows="4" placeholder="Describe your symptoms, pain location, duration, and any previous treatments" required></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="existingPatient">
+                                            <label class="form-check-label" for="existingPatient">
+                                                I am an existing patient of Dr. PhysioCare
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="step-buttons">
+                                <button type="button" class="btn btn-outline-secondary prev-step" data-prev="2">
+                                    <i class="fas fa-arrow-left me-2"></i> Back
+                                </button>
+                                <button type="button" class="btn btn-primary next-step" data-next="4">
+                                    Next: Confirmation <i class="fas fa-arrow-right ms-2"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Step 4: Confirmation -->
+                        <div class="step-content" id="step4-content">
+                            <h4 class="step-title">Confirm Appointment</h4>
+                            <p class="step-subtitle">Review your appointment details before booking</p>
+                            
+                            <div class="confirmation-details">
+                                <div class="appointment-summary">
+                                    <h5>Appointment Summary</h5>
+                                    <div class="summary-item">
+                                        <strong>Service:</strong>
+                                        <span id="summaryService">-</span>
+                                    </div>
+                                    <div class="summary-item">
+                                        <strong>Date:</strong>
+                                        <span id="summaryDate">-</span>
+                                    </div>
+                                    <div class="summary-item">
+                                        <strong>Time:</strong>
+                                        <span id="summaryTime">-</span>
+                                    </div>
+                                    <div class="summary-item">
+                                        <strong>Patient:</strong>
+                                        <span id="summaryPatient">-</span>
+                                    </div>
+                                    <div class="summary-item">
+                                        <strong>Contact:</strong>
+                                        <span id="summaryContact">-</span>
+                                    </div>
+                                    <div class="summary-item">
+                                        <strong>Visit Type:</strong>
+                                        <span id="summaryVisitType">-</span>
+                                    </div>
+                                    <div class="summary-item">
+                                        <strong>Amount:</strong>
+                                        <span id="summaryAmount" class="text-success fw-bold">-</span>
+                                    </div>
+                                </div>
+
+                                <div class="payment-options mt-4">
+                                    <h6>Payment Method</h6>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="paymentMethod" id="payAtClinic" value="clinic" checked>
+                                        <label class="form-check-label" for="payAtClinic">
+                                            Pay at Clinic (Cash/Card/UPI)
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="paymentMethod" id="onlinePayment" value="online">
+                                        <label class="form-check-label" for="onlinePayment">
+                                            Online Payment (Pay Now)
+                                        </label>
+                                    </div>
+                                    
+                                    <div class="online-payment-options mt-3" id="onlinePaymentOptions" style="display: none;">
+                                        <div class="payment-methods">
+                                            <button type="button" class="btn btn-outline-primary payment-btn">
+                                                <i class="fab fa-google-pay"></i> Google Pay
+                                            </button>
+                                            <button type="button" class="btn btn-outline-primary payment-btn">
+                                                <i class="fab fa-phonepe"></i> PhonePe
+                                            </button>
+                                            <button type="button" class="btn btn-outline-primary payment-btn">
+                                                <i class="fas fa-qrcode"></i> UPI QR
+                                            </button>
+                                            <button type="button" class="btn btn-outline-primary payment-btn">
+                                                <i class="fas fa-credit-card"></i> Card
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="cancellation-policy mt-4">
+                                    <div class="alert alert-info">
+                                        <h6><i class="fas fa-info-circle"></i> Cancellation Policy</h6>
+                                        <ul class="mb-0">
+                                            <li>Free cancellation upto 24 hours before appointment</li>
+                                            <li>50% charge for cancellations within 24 hours</li>
+                                            <li>No refund for no-shows or same-day cancellations</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="step-buttons">
+                                <button type="button" class="btn btn-outline-secondary prev-step" data-prev="3">
+                                    <i class="fas fa-arrow-left me-2"></i> Back
+                                </button>
+                                <button type="button" class="btn btn-success" id="confirmBooking">
+                                    <i class="fas fa-calendar-check me-2"></i> Confirm Booking
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Appointment Status -->
+                        <div class="appointment-status" id="appointmentStatus" style="display: none;">
+                            <div class="status-success text-center">
+                                <i class="fas fa-check-circle fa-4x text-success mb-3"></i>
+                                <h4>Appointment Booked Successfully!</h4>
+                                <p>Your appointment has been confirmed. You'll receive confirmation details via email and WhatsApp.</p>
+                                
+                                <div class="booking-details mt-4">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="booking-item">
+                                                <strong>Booking ID:</strong>
+                                                <span id="bookingId">-</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="booking-item">
+                                                <strong>Status:</strong>
+                                                <span class="badge bg-success">Confirmed</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="mt-4">
+                                    <a href="#" class="btn btn-primary me-2">
+                                        <i class="fas fa-download"></i> Download Receipt
+                                    </a>
+                                    <a href="index.html" class="btn btn-outline-primary">
+                                        <i class="fas fa-home"></i> Back to Home
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="appointment-sidebar" data-aos="fade-left">
+                        <!-- Selected Appointment Summary -->
+                        <div class="sidebar-card">
+                            <h5>Your Appointment</h5>
+                            <div class="selected-appointment">
+                                <div class="selected-item">
+                                    <i class="fas fa-stethoscope"></i>
+                                    <div>
+                                        <small>Service</small>
+                                        <div id="sidebarService">Not Selected</div>
+                                    </div>
+                                </div>
+                                <div class="selected-item">
+                                    <i class="fas fa-calendar"></i>
+                                    <div>
+                                        <small>Date</small>
+                                        <div id="sidebarDate">Not Selected</div>
+                                    </div>
+                                </div>
+                                <div class="selected-item">
+                                    <i class="fas fa-clock"></i>
+                                    <div>
+                                        <small>Time</small>
+                                        <div id="sidebarTime">Not Selected</div>
+                                    </div>
+                                </div>
+                                <div class="selected-item">
+                                    <i class="fas fa-rupee-sign"></i>
+                                    <div>
+                                        <small>Amount</small>
+                                        <div id="sidebarAmount">₹0</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Doctor Availability -->
+                        <div class="sidebar-card">
+                            <h5>Doctor Availability</h5>
+                            <div class="availability-info">
+                                <div class="availability-item">
+                                    <i class="fas fa-clock text-primary"></i>
+                                    <div>
+                                        <strong>Mon - Sat</strong>
+                                        <p>9:00 AM - 8:00 PM</p>
+                                    </div>
+                                </div>
+                                <div class="availability-item">
+                                    <i class="fas fa-clock text-warning"></i>
+                                    <div>
+                                        <strong>Sunday</strong>
+                                        <p>Emergency Only</p>
+                                    </div>
+                                </div>
+                                <div class="availability-item">
+                                    <i class="fas fa-home text-success"></i>
+                                    <div>
+                                        <strong>Home Visits</strong>
+                                        <p>Available on Request</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Quick Actions -->
+                        <div class="sidebar-card">
+                            <h5>Quick Actions</h5>
+                            <div class="quick-actions">
+                                <a href="tel:+919876543210" class="btn btn-outline-primary w-100 mb-2">
+                                    <i class="fas fa-phone-alt"></i> Call Clinic
+                                </a>
+                                <a href="https://wa.me/919876543210" class="btn btn-outline-success w-100 mb-2" target="_blank">
+                                    <i class="fab fa-whatsapp"></i> WhatsApp
+                                </a>
+                                <a href="#" class="btn btn-outline-info w-100 mb-2" data-bs-toggle="modal" data-bs-target="#emergencyModal">
+                                    <i class="fas fa-ambulance"></i> Emergency
+                                </a>
+                                <a href="services.html" class="btn btn-outline-secondary w-100">
+                                    <i class="fas fa-info-circle"></i> View Services
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Section -->
+                        <div class="sidebar-card">
+                            <h5>Common Questions</h5>
+                            <div class="faq-list">
+                                <div class="faq-item">
+                                    <button class="faq-question" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                        What should I bring?
+                                    </button>
+                                    <div class="collapse" id="faq1">
+                                        <div class="faq-answer">
+                                            Previous medical reports, MRI/CT scans, doctor's prescription if any.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="faq-item">
+                                    <button class="faq-question" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                        Cancellation policy?
+                                    </button>
+                                    <div class="collapse" id="faq2">
+                                        <div class="faq-answer">
+                                            Free cancellation 24 hours before. 50% charge within 24 hours.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="faq-item">
+                                    <button class="faq-question" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                        Insurance coverage?
+                                    </button>
+                                    <div class="collapse" id="faq3">
+                                        <div class="faq-answer">
+                                            We accept all major insurance providers. Bring your insurance card.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- My Appointments Section -->
+    <section id="myAppointments" class="my-appointments-section" style="display: none;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="appointments-card">
+                        <h3 class="section-title">My Appointments</h3>
+                        
+                        <div class="appointments-filter mb-4">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <select class="form-control" id="filterStatus">
+                                        <option value="">All Status</option>
+                                        <option value="upcoming">Upcoming</option>
+                                        <option value="completed">Completed</option>
+                                        <option value="cancelled">Cancelled</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3">
+                                    <input type="date" class="form-control" id="filterDate">
+                                </div>
+                                <div class="col-md-3">
+                                    <select class="form-control" id="filterService">
+                                        <option value="">All Services</option>
+                                        <option value="consultation">Consultation</option>
+                                        <option value="sports">Sports Injury</option>
+                                        <option value="pain">Pain Management</option>
+                                        <option value="post-surgical">Post-Surgical</option>
+                                        <option value="neurological">Neurological</option>
+                                        <option value="home-visit">Home Visit</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3">
+                                    <button class="btn btn-primary w-100" id="searchAppointments">
+                                        <i class="fas fa-search"></i> Search
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="appointments-list" id="appointmentsList">
+                            <!-- Appointments will be loaded here -->
+                            <div class="no-appointments text-center py-5">
+                                <i class="fas fa-calendar-times fa-3x text-muted mb-3"></i>
+                                <h5>No Appointments Found</h5>
+                                <p>You haven't booked any appointments yet.</p>
+                                <a href="#appointmentForm" class="btn btn-primary">Book Your First Appointment</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emergency Modal -->
+    <div class="modal fade" id="emergencyModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-danger text-white">
+                    <h5 class="modal-title"><i class="fas fa-ambulance"></i> Emergency Contact</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-phone fa-3x text-danger"></i>
+                    </div>
+                    <h4 class="text-center mb-3">Emergency Helpline</h4>
+                    <div class="text-center mb-4">
+                        <a href="tel:+919876543210" class="btn btn-danger btn-lg">
+                            <i class="fas fa-phone-alt"></i> +91 98765 43210
+                        </a>
+                    </div>
+                    <div class="alert alert-warning">
+                        <h6><i class="fas fa-exclamation-triangle"></i> Important Instructions:</h6>
+                        <ul class="mb-0">
+                            <li>Call this number for emergency appointments</li>
+                            <li>Available 24/7 for critical cases</li>
+                            <li>Home emergency visits available</li>
+                            <li>Keep your address ready</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="footer-brand">
+                        <i class="fas fa-bone"></i>
+                        <span>Dr. Physio<span class="brand-highlight">Care</span></span>
+                    </div>
+                    <p class="footer-about">Providing expert physiotherapy services with compassion and evidence-based treatment approaches for over 15 years.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-telegram"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5>Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="testimonials.html">Testimonials</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5>Our Services</h5>
+                    <ul class="footer-links">
+                        <li><a href="services.html#sports">Sports Injury</a></li>
+                        <li><a href="services.html#pain">Pain Management</a></li>
+                        <li><a href="services.html#post-surgical">Post-Surgical Rehab</a></li>
+                        <li><a href="services.html#neurological">Neurological Rehab</a></li>
+                        <li><a href="services.html#home">Home Visits</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h5>Contact Info</h5>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Health Street, Medical City</p>
+                        <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                        <p><i class="fas fa-envelope"></i> info@drphysiocare.com</p>
+                        <p><i class="fas fa-clock"></i> Mon-Sat: 9AM-8PM</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Dr. PhysioCare. All Rights Reserved.</p>
+                <p class="disclaimer">Book appointments online 24/7 - Your health is our priority</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- FullCalendar -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+    <script src="js/appointment.js"></script>
+    <script src="js/appointment-system.js"></script>
+    
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+
+        // Initialize appointment system
+        const appointmentSystem = new AppointmentSystem();
+    </script>
+</body>
+</html>

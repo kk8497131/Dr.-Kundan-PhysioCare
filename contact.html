@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Dr. Kundan PhysioCare - Get in Touch</title>
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Leaflet CSS for Map -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/919304986357" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-bone"></i>
+                <span class="brand-text">Dr. Kundan Physio<span class="brand-highlight">Care</span></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="testimonials.html">Testimonials</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="authDropdown" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-user-circle"></i> Account
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="login.html"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+                            <li><a class="dropdown-item" href="register.html"><i class="fas fa-user-plus"></i> Register</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="appointment.html#myAppointments"><i class="fas fa-calendar-check"></i> My Appointments</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="appointment.html" class="btn btn-appointment-nav">Book Appointment</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Hero -->
+    <section class="contact-hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h1 class="hero-title">Get in Touch With Us</h1>
+                    <p class="hero-subtitle">We're here to help you on your healing journey. Reach out for appointments, queries, or emergency care.</p>
+                    
+                    <div class="contact-urgency">
+                        <div class="urgency-card emergency">
+                            <i class="fas fa-ambulance"></i>
+                            <div>
+                                <h4>Emergency Contact</h4>
+                                <p>Available 24/7 for urgent cases</p>
+                                <a href="tel:+919876543210" class="btn btn-danger btn-sm">Call Now</a>
+                            </div>
+                        </div>
+                        <div class="urgency-card appointment">
+                            <i class="fas fa-calendar-check"></i>
+                            <div>
+                                <h4>Quick Appointment</h4>
+                                <p>Book online in 2 minutes</p>
+                                <a href="appointment.html" class="btn btn-primary btn-sm">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="contact-hero-image">
+                        <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Contact Physiotherapy" class="img-fluid rounded-3">
+                        <div class="contact-badge">
+                            <i class="fas fa-headset"></i>
+                            <div>
+                                <h5>Live Support</h5>
+                                <p>Mon-Sat: 9AM-8PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Information -->
+    <section class="contact-info-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4" data-aos="fade-up">
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h4>Clinic Address</h4>
+                        <p>123 Health Street, Medical City<br>New Delhi, India 110001</p>
+                        <a href="#map" class="info-link">
+                            <i class="fas fa-directions me-2"></i> Get Directions
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <h4>Phone Numbers</h4>
+                        <p>+91 9304986357 (Mobile)<br>+91 9304986357 (Landline)</p>
+                        <a href="tel:+91 9304986357" class="info-link">
+                            <i class="fas fa-phone me-2"></i> Call Now
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h4>Email Address</h4>
+                        <p>kk8497131@gmail.com<br>kk8497131@gmail.com</p>
+                        <a href="mailto:info@drphysiocare.com" class="info-link">
+                            <i class="fas fa-paper-plane me-2"></i> Send Email
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form & Map -->
+    <section class="contact-form-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="contact-form-card">
+                        <h3 class="form-title">Send Us a Message</h3>
+                        <p class="form-subtitle">We'll respond within 24 hours</p>
+                        
+                        <form id="contactForm">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="contactName">Your Name *</label>
+                                        <input type="text" class="form-control" id="contactName" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="contactEmail">Email Address *</label>
+                                        <input type="email" class="form-control" id="contactEmail" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="contactPhone">Phone Number</label>
+                                        <input type="tel" class="form-control" id="contactPhone">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="contactSubject">Subject *</label>
+                                        <select class="form-control" id="contactSubject" required>
+                                            <option value="">Select Subject</option>
+                                            <option value="appointment">Appointment Booking</option>
+                                            <option value="query">General Inquiry</option>
+                                            <option value="emergency">Emergency Contact</option>
+                                            <option value="feedback">Feedback</option>
+                                            <option value="billing">Billing Inquiry</option>
+                                            <option value="insurance">Insurance Related</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label for="contactMessage">Your Message *</label>
+                                        <textarea class="form-control" id="contactMessage" rows="5" required></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-check mb-3">
+                                        <input class="form-check-input" type="checkbox" id="newsletterOptIn">
+                                        <label class="form-check-label" for="newsletterOptIn">
+                                            Subscribe to our newsletter for health tips
+                                        </label>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary btn-lg w-100">
+                                        <i class="fas fa-paper-plane me-2"></i> Send Message
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="map-card">
+                        <h3 class="map-title">Find Our Clinic</h3>
+                        <div id="map"></div>
+                        <div class="map-info">
+                            <div class="info-item">
+                                <i class="fas fa-subway"></i>
+                                <div>
+                                    <h6>Nearest Metro Station</h6>
+                                    <p>Medical City Metro (5 mins walk)</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-parking"></i>
+                                <div>
+                                    <h6>Parking Facility</h6>
+                                    <p>Free parking available for patients</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-wheelchair"></i>
+                                <div>
+                                    <h6>Accessibility</h6>
+                                    <p>Wheelchair accessible entrance</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emergency Contact -->
+    <section class="emergency-contact-section">
+        <div class="container">
+            <div class="emergency-card" data-aos="fade-up">
+                <div class="row align-items-center">
+                    <div class="col-lg-8">
+                        <div class="emergency-content">
+                            <h3><i class="fas fa-ambulance me-2"></i> 24/7 Emergency Physiotherapy</h3>
+                            <p>Immediate care for acute injuries, post-surgical emergencies, and severe pain conditions. Our emergency team is always ready to assist.</p>
+                            <div class="emergency-features">
+                                <div class="feature">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Same-day emergency appointments</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Home emergency visits available</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Direct coordination with hospitals</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="emergency-action">
+                            <div class="phone-number">
+                                <i class="fas fa-phone-alt"></i>
+                                <div>
+                                    <small>Emergency Hotline</small>
+                                    <h4>+91 9304986357</h4>
+                                </div>
+                            </div>
+                            <div class="emergency-buttons">
+                                <a href="tel:+919304986357" class="btn btn-danger btn-lg w-100 mb-2">
+                                    <i class="fas fa-phone-alt"></i> Call Emergency
+                                </a>
+                                <a href="https://wa.me/919304986357" class="btn btn-success btn-lg w-100" target="_blank">
+                                    <i class="fab fa-whatsapp"></i> WhatsApp Emergency
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Department Contacts -->
+    <section class="departments-section">
+        <div class="container">
+            <h2 class="section-title text-center" data-aos="fade-up">Department Contacts</h2>
+            <p class="section-subtitle text-center" data-aos="fade-up">Connect with specific departments for specialized queries</p>
+            
+            <div class="row">
+                <div class="col-lg-3 col-md-6" data-aos="fade-up">
+                    <div class="department-card">
+                        <div class="dept-icon">
+                            <i class="fas fa-running"></i>
+                        </div>
+                        <h5>Sports Injury</h5>
+                        <p>Dr. Amit Kumar</p>
+                        <a href="tel:+919876543211" class="dept-contact">
+                            <i class="fas fa-phone"></i> +91 98765 43211
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="department-card">
+                        <div class="dept-icon">
+                            <i class="fas fa-user-injured"></i>
+                        </div>
+                        <h5>Pain Management</h5>
+                        <p>Dr. Priya Verma</p>
+                        <a href="tel:+919876543212" class="dept-contact">
+                            <i class="fas fa-phone"></i> +91 98765 43212
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="department-card">
+                        <div class="dept-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h5>Neurological Rehab</h5>
+                        <p>Dr. Neha Singh</p>
+                        <a href="tel:+919876543213" class="dept-contact">
+                            <i class="fas fa-phone"></i> +91 98765 43213
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="department-card">
+                        <div class="dept-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h5>Home Visits</h5>
+                        <p>Dr. Rajesh Sharma</p>
+                        <a href="tel:+919876543214" class="dept-contact">
+                            <i class="fas fa-phone"></i> +91 98765 43214
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Operating Hours -->
+    <section class="hours-section">
+        <div class="container">
+            <div class="hours-card" data-aos="fade-up">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h3>Clinic Operating Hours</h3>
+                        <div class="hours-table">
+                            <div class="hour-row">
+                                <span>Monday - Friday</span>
+                                <span>9:00 AM - 8:00 PM</span>
+                            </div>
+                            <div class="hour-row">
+                                <span>Saturday</span>
+                                <span>9:00 AM - 6:00 PM</span>
+                            </div>
+                            <div class="hour-row">
+                                <span>Sunday</span>
+                                <span>Emergency Only</span>
+                            </div>
+                            <div class="hour-row">
+                                <span>Public Holidays</span>
+                                <span>10:00 AM - 4:00 PM</span>
+                            </div>
+                        </div>
+                        <div class="holiday-notice">
+                            <i class="fas fa-info-circle"></i>
+                            <p>Please call ahead on public holidays as timings may vary</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <h3>Quick Contact Options</h3>
+                        <div class="contact-options">
+                            <a href="https://wa.me/919304986357" class="contact-option whatsapp" target="_blank">
+                                <i class="fab fa-whatsapp"></i>
+                                <div>
+                                    <h6>WhatsApp</h6>
+                                    <p>Instant messaging for quick queries</p>
+                                </div>
+                            </a>
+                            <a href="mailto:info@drphysiocare.com" class="contact-option email">
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <h6>Email</h6>
+                                    <p>Detailed queries & documents</p>
+                                </div>
+                            </a>
+                            <a href="tel:+919876543210" class="contact-option phone">
+                                <i class="fas fa-phone-alt"></i>
+                                <div>
+                                    <h6>Phone Call</h6>
+                                    <p>Direct conversation</p>
+                                </div>
+                            </a>
+                            <a href="appointment.html" class="contact-option appointment">
+                                <i class="fas fa-calendar-check"></i>
+                                <div>
+                                    <h6>Online Booking</h6>
+                                    <p>Book appointments 24/7</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="contact-faq">
+        <div class="container">
+            <h2 class="section-title text-center" data-aos="fade-up">Frequently Asked Questions</h2>
+            <p class="section-subtitle text-center" data-aos="fade-up">Quick answers to common questions</p>
+            
+            <div class="faq-accordion" data-aos="fade-up">
+                <div class="accordion" id="contactFAQ">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                What documents should I bring for my first visit?
+                            </button>
+                        </h2>
+                        <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#contactFAQ">
+                            <div class="accordion-body">
+                                Please bring your ID proof, previous medical reports, MRI/CT scans if any, doctor's prescription, and insurance details if applicable.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                Do you accept insurance?
+                            </button>
+                        </h2>
+                        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#contactFAQ">
+                            <div class="accordion-body">
+                                Yes, we accept all major insurance providers including Star Health, HDFC ERGO, ICICI Lombard, Bajaj Allianz, and New India Assurance. Please bring your insurance card and pre-authorization if required.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                How do I book a home visit?
+                            </button>
+                        </h2>
+                        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#contactFAQ">
+                            <div class="accordion-body">
+                                You can book a home visit by calling our home visit department at +91 98765 43214 or through the appointment booking page. Please provide your complete address and patient condition details.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                What is your cancellation policy?
+                            </button>
+                        </h2>
+                        <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#contactFAQ">
+                            <div class="accordion-body">
+                                Free cancellation upto 24 hours before appointment. 50% charge for cancellations within 24 hours. No refund for no-shows or same-day cancellations.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                                Is parking available at the clinic?
+                            </button>
+                        </h2>
+                        <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#contactFAQ">
+                            <div class="accordion-body">
+                                Yes, we provide free parking for our patients. The parking area is located at the back of the building and is wheelchair accessible.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-4">
+                    <a href="#" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#askQuestionModal">
+                        <i class="fas fa-question-circle me-2"></i> Ask Another Question
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media Connect -->
+    <section class="social-connect">
+        <div class="container">
+            <div class="social-card" data-aos="fade-up">
+                <h3 class="text-center">Connect With Us on Social Media</h3>
+                <p class="text-center">Follow us for health tips, updates, and community support</p>
+                
+                <div class="social-icons-large">
+                    <a href="https://www.facebook.com/share/1FS45RAmFt/" class="social-icon-large facebook">
+                        <i class="fab fa-facebook-f"></i>
+                        <span>Facebook</span>
+                    </a>
+                    <a href="https://x.com/Drkundanku86028?t=JSvtIMVPqDb3k5A5qI4tBA&s=09" class="social-icon-large twitter">
+                        <i class="fab fa-twitter"></i>
+                        <span>Twitter</span>
+                    </a>
+                    <a href="https://www.instagram.com/thakur_kundan_raj?igsh=bXJtN2dxcmw0MGsz" class="social-icon-large instagram">
+                        <i class="fab fa-instagram"></i>
+                        <span>Instagram</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/dr-kundan-kumar-pt-103579385?utm_source=share_via&utm_content=profile&utm_medium=member_android" class="social-icon-large linkedin">
+                        <i class="fab fa-linkedin-in"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="#" class="social-icon-large youtube">
+                        <i class="fab fa-youtube"></i>
+                        <span>YouTube</span>
+                    </a>
+                    <a href="#" class="social-icon-large telegram">
+                        <i class="fab fa-telegram"></i>
+                        <span>Telegram</span>
+                    </a>
+                </div>
+                
+                <div class="newsletter-subscribe text-center mt-4">
+                    <h5>Subscribe to Our Newsletter</h5>
+                    <p>Get health tips, exercise videos, and clinic updates</p>
+                    <form class="newsletter-form">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Enter your email address">
+                            <button class="btn btn-primary" type="submit">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="footer-brand">
+                        <i class="fas fa-bone"></i>
+                        <span>Dr. Kundan Physio<span class="brand-highlight">Care</span></span>
+                    </div>
+                    <p class="footer-about">Providing expert physiotherapy services with compassion and evidence-based treatment approaches for over 15 years.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/share/1FS45RAmFt/" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://x.com/Drkundanku86028?t=JSvtIMVPqDb3k5A5qI4tBA&s=09" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/thakur_kundan_raj?igsh=bXJtN2dxcmw0MGsz" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/dr-kundan-kumar-pt-103579385?utm_source=share_via&utm_content=profile&utm_medium=member_android" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-telegram"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5>Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="testimonials.html">Testimonials</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5>Our Services</h5>
+                    <ul class="footer-links">
+                        <li><a href="services.html#sports">Sports Injury</a></li>
+                        <li><a href="services.html#pain">Pain Management</a></li>
+                        <li><a href="services.html#post-surgical">Post-Surgical Rehab</a></li>
+                        <li><a href="services.html#neurological">Neurological Rehab</a></li>
+                        <li><a href="services.html#home">Home Visits</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h5>Contact Info</h5>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> 303012/302017 Rajasthan, Jaipur City</p>
+                        <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                        <p><i class="fas fa-envelope"></i> info@drphysiocare.com</p>
+                        <p><i class="fas fa-clock"></i> Mon-Sat: 9AM-8PM</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Dr.Kundan PhysioCare. All Rights Reserved.</p>
+                <p class="disclaimer">Always available to help you heal better</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Ask Question Modal -->
+    <div class="modal fade" id="askQuestionModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"><i class="fas fa-question-circle me-2"></i>Ask a Question</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="questionForm">
+                        <div class="form-group mb-3">
+                            <label for="questionName">Your Name</label>
+                            <input type="text" class="form-control" id="questionName">
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="questionEmail">Email Address</label>
+                            <input type="email" class="form-control" id="questionEmail">
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="questionCategory">Question Category</label>
+                            <select class="form-control" id="questionCategory">
+                                <option value="">Select Category</option>
+                                <option value="appointment">Appointment Related</option>
+                                <option value="treatment">Treatment Related</option>
+                                <option value="billing">Billing & Insurance</option>
+                                <option value="emergency">Emergency</option>
+                                <option value="general">General Inquiry</option>
+                            </select>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="questionText">Your Question</label>
+                            <textarea class="form-control" id="questionText" rows="4"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary" id="submitQuestion">Submit Question</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Leaflet JS for Map -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <!-- EmailJS for Contact Form -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+    <script src="js/contact.js"></script>
+    
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+
+        // Initialize EmailJS (replace with your actual credentials)
+        emailjs.init('YOUR_PUBLIC_KEY'); // Get from https://www.emailjs.com
+
+        // Initialize contact system
+        const contactSystem = new ContactSystem();
+    </script>
+</body>
+</html>

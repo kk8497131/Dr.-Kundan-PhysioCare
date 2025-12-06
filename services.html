@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | Dr. PhysioCare - Comprehensive Physiotherapy Treatments</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation (same as index.html) -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-bone"></i>
+                <span class="brand-text">Dr. Kundan Physio<span class="brand-highlight">Care</span></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="testimonials.html">Testimonials</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="authDropdown" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-user-circle"></i> Account
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="login.html"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+                            <li><a class="dropdown-item" href="register.html"><i class="fas fa-user-plus"></i> Register</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-calendar-check"></i> My Appointments</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html#appointment" class="btn btn-appointment-nav">Book Appointment</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/919304986357" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Services Hero -->
+    <section class="services-hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center" data-aos="fade-up">
+                    <h1 class="hero-title">Comprehensive Physiotherapy Services</h1>
+                    <p class="hero-subtitle">Evidence-based treatments for pain relief, mobility restoration, and enhanced quality of life</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- All Services -->
+    <section class="all-services">
+        <div class="container">
+            <!-- Sports Injury -->
+            <div class="service-detail" id="sports" data-aos="fade-up">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="service-image">
+                            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Sports Injury Treatment">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="service-content">
+                            <span class="service-category">Specialized Treatment</span>
+                            <h3>Sports Injury Rehabilitation</h3>
+                            <p>Comprehensive rehabilitation programs for athletes at all levels. Our evidence-based approach ensures safe return to sport with reduced risk of re-injury.</p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check-circle"></i> ACL & Meniscus Injury Recovery</li>
+                                <li><i class="fas fa-check-circle"></i> Rotator Cuff & Shoulder Rehabilitation</li>
+                                <li><i class="fas fa-check-circle"></i> Ankle Sprain & Fracture Management</li>
+                                <li><i class="fas fa-check-circle"></i> Concussion & Head Injury Protocol</li>
+                                <li><i class="fas fa-check-circle"></i> Performance Enhancement Training</li>
+                            </ul>
+                            <div class="service-action">
+                                <a href="index.html#appointment" class="btn btn-primary">Book Consultation</a>
+                                <span class="price-tag">Starting from ₹1500/session</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pain Management -->
+            <div class="service-detail" id="pain" data-aos="fade-up">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 order-lg-2">
+                        <div class="service-image">
+                            <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Pain Management">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 order-lg-1">
+                        <div class="service-content">
+                            <span class="service-category">Chronic Pain Relief</span>
+                            <h3>Pain Management Therapy</h3>
+                            <p>Advanced techniques for managing chronic pain conditions without heavy reliance on medications. Our holistic approach addresses the root cause of pain.</p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check-circle"></i> Back & Neck Pain Treatment</li>
+                                <li><i class="fas fa-check-circle"></i> Arthritis & Joint Pain Management</li>
+                                <li><i class="fas fa-check-circle"></i> Sciatica & Nerve Pain Relief</li>
+                                <li><i class="fas fa-check-circle"></i> Fibromyalgia & Chronic Fatigue</li>
+                                <li><i class="fas fa-check-circle"></i> Postural Correction Programs</li>
+                            </ul>
+                            <div class="service-action">
+                                <a href="index.html#appointment" class="btn btn-primary">Book Consultation</a>
+                                <span class="price-tag">Starting from ₹1200/session</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Post-Surgical Rehab -->
+            <div class="service-detail" id="post-surgical" data-aos="fade-up">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="service-image">
+                            <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Post-Surgical Rehabilitation">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="service-content">
+                            <span class="service-category">Recovery Support</span>
+                            <h3>Post-Surgical Rehabilitation</h3>
+                            <p>Specialized programs for optimal recovery after surgical procedures. We work closely with surgeons to ensure seamless transition from hospital to home.</p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check-circle"></i> Joint Replacement Rehabilitation</li>
+                                <li><i class="fas fa-check-circle"></i> Spinal Surgery Recovery</li>
+                                <li><i class="fas fa-check-circle"></i> ACL Reconstruction Therapy</li>
+                                <li><i class="fas fa-check-circle"></i> Rotator Cuff Repair Recovery</li>
+                                <li><i class="fas fa-check-circle"></i> Fracture Rehabilitation</li>
+                            </ul>
+                            <div class="service-action">
+                                <a href="index.html#appointment" class="btn btn-primary">Book Consultation</a>
+                                <span class="price-tag">Starting from ₹1800/session</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Neurological Rehab -->
+            <div class="service-detail" id="neurological" data-aos="fade-up">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 order-lg-2">
+                        <div class="service-image">
+                            <img src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Neurological Rehabilitation">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 order-lg-1">
+                        <div class="service-content">
+                            <span class="service-category">Specialized Care</span>
+                            <h3>Neurological Rehabilitation</h3>
+                            <p>Comprehensive programs for patients with neurological conditions. Our goal is to maximize independence and improve quality of life.</p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check-circle"></i> Stroke Recovery & Rehabilitation</li>
+                                <li><i class="fas fa-check-circle"></i> Parkinson's Disease Management</li>
+                                <li><i class="fas fa-check-circle"></i> Multiple Sclerosis Therapy</li>
+                                <li><i class="fas fa-check-circle"></i> Cerebral Palsy Treatment</li>
+                                <li><i class="fas fa-check-circle"></i> Balance & Gait Training</li>
+                            </ul>
+                            <div class="service-action">
+                                <a href="index.html#appointment" class="btn btn-primary">Book Consultation</a>
+                                <span class="price-tag">Starting from ₹2000/session</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Home Visits -->
+            <div class="service-detail" id="home" data-aos="fade-up">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="service-image">
+                            <img src="https://images.unsplash.com/photo-1584467735871-8db9ac8d0916?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Home Visit Service">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="service-content">
+                            <span class="service-category">Convenient Care</span>
+                            <h3>Home Visit Physiotherapy</h3>
+                            <p>Professional physiotherapy services delivered at your doorstep. Ideal for elderly patients, post-hospitalization care, and those with mobility challenges.</p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check-circle"></i> Elderly Care & Fall Prevention</li>
+                                <li><i class="fas fa-check-circle"></i> Post-Hospitalization Care</li>
+                                <li><i class="fas fa-check-circle"></i> Palliative Care Support</li>
+                                <li><i class="fas fa-check-circle"></i> Regular Progress Monitoring</li>
+                                <li><i class="fas fa-check-circle"></i> Family Training & Education</li>
+                            </ul>
+                            <div class="service-action">
+                                <a href="index.html#appointment" class="btn btn-primary">Book Home Visit</a>
+                                <span class="price-tag">Starting from ₹2500/visit</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Treatment Technologies -->
+    <section class="technologies-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Advanced Treatment Technologies</h2>
+            <p class="section-subtitle" data-aos="fade-up">State-of-the-art equipment for optimal recovery</p>
+            
+            <div class="row">
+                <div class="col-lg-3 col-md-6" data-aos="fade-up">
+                    <div class="tech-card">
+                        <i class="fas fa-wave-square"></i>
+                        <h4>Shockwave Therapy</h4>
+                        <p>Advanced treatment for chronic tendon pain and soft tissue injuries</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="tech-card">
+                        <i class="fas fa-bolt"></i>
+                        <h4>TENS & IFT</h4>
+                        <p>Electrotherapy for pain relief and muscle stimulation</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="tech-card">
+                        <i class="fas fa-temperature-high"></i>
+                        <h4>Ultrasound Therapy</h4>
+                        <p>Deep tissue heating for improved healing and pain reduction</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="tech-card">
+                        <i class="fas fa-hand-holding-medical"></i>
+                        <h4>Manual Therapy</h4>
+                        <p>Hands-on techniques for joint mobilization and soft tissue release</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Insurance Partners -->
+    <section class="insurance-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Insurance & Payment Options</h2>
+            <p class="section-subtitle" data-aos="fade-up">We accept all major insurance providers</p>
+            
+            <div class="insurance-logos" data-aos="fade-up">
+                <div class="insurance-logo">Star Health</div>
+                <div class="insurance-logo">HDFC ERGO</div>
+                <div class="insurance-logo">ICICI Lombard</div>
+                <div class="insurance-logo">Bajaj Allianz</div>
+                <div class="insurance-logo">New India</div>
+            </div>
+            
+            <div class="text-center mt-4">
+                <a href="contact.html" class="btn btn-outline-primary">Verify Your Insurance</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (same as index.html) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="footer-brand">
+                        <i class="fas fa-bone"></i>
+                        <span>Dr. Kundan Physio<span class="brand-highlight">Care</span></span>
+                    </div>
+                    <p class="footer-about">Providing expert physiotherapy services with compassion and evidence-based treatment approaches for over 15 years.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/share/1FS45RAmFt/" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://x.com/Drkundanku86028?t=JSvtIMVPqDb3k5A5qI4tBA&s=09" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/thakur_kundan_raj?igsh=bXJtN2dxcmw0MGsz" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/dr-kundan-kumar-pt-103579385?utm_source=share_via&utm_content=profile&utm_medium=member_android" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-telegram"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5>Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="testimonials.html">Testimonials</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5>Our Services</h5>
+                    <ul class="footer-links">
+                        <li><a href="services.html#sports">Sports Injury</a></li>
+                        <li><a href="services.html#pain">Pain Management</a></li>
+                        <li><a href="services.html#post-surgical">Post-Surgical Rehab</a></li>
+                        <li><a href="services.html#neurological">Neurological Rehab</a></li>
+                        <li><a href="services.html#home">Home Visits</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h5>Contact Info</h5>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> 303012/302017 Rajasthan, Jaipur City</p>
+                        <p><i class="fas fa-phone"></i> +91 93049 86357</p>
+                        <p><i class="fas fa-envelope"></i> kk8497131@gmail.com</p>
+                        <p><i class="fas fa-clock"></i> Mon-Sat: 9AM-8PM</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Dr. PhysioCare. All Rights Reserved.</p>
+                <p class="disclaimer">Designed with ❤️ for better healthcare</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+</body>
+</html>

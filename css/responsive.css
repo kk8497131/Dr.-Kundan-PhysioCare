@@ -1,0 +1,202 @@
+/* Responsive Design - Dr. PhysioCare Website */
+
+/* Large Desktop */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+    }
+    
+    .hero-title {
+        font-size: 3.5rem;
+    }
+}
+
+/* Tablet and Desktop */
+@media (max-width: 1199px) {
+    .hero-title {
+        font-size: 2.8rem;
+    }
+    
+    .section-title {
+        font-size: 2.2rem;
+    }
+    
+    .hero-card {
+        width: 250px;
+        left: -10px;
+    }
+}
+
+/* Tablet */
+@media (max-width: 991px) {
+    .navbar-nav {
+        padding: 20px 0;
+    }
+    
+    .btn-appointment-nav {
+        margin-left: 0;
+        margin-top: 10px;
+        width: 100%;
+    }
+    
+    .hero-section {
+        padding: 120px 0 80px;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+    }
+    
+    .hero-buttons .btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    .hero-stats {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .hero-card {
+        position: relative;
+        bottom: 0;
+        left: 0;
+        margin-top: 20px;
+        width: 100%;
+    }
+    
+    .about-content {
+        padding-left: 0;
+        margin-top: 40px;
+    }
+    
+    .service-card {
+        margin-bottom: 30px;
+    }
+    
+    .testimonial-slider {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .appointment-card {
+        padding: 30px;
+    }
+}
+
+/* Mobile Landscape */
+@media (max-width: 767px) {
+    .hero-title {
+        font-size: 2.2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .hero-stats {
+        gap: 20px;
+    }
+    
+    .stat h3 {
+        font-size: 2rem;
+    }
+    
+    .testimonial-slider {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer {
+        padding: 60px 0 20px;
+    }
+    
+    .footer .col-lg-4,
+    .footer .col-lg-3,
+    .footer .col-lg-2 {
+        margin-bottom: 30px;
+    }
+    
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+/* Mobile Portrait */
+@media (max-width: 575px) {
+    .hero-title {
+        font-size: 1.8rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .hero-buttons .btn {
+        padding: 12px 20px;
+    }
+    
+    .appointment-card {
+        padding: 20px;
+    }
+    
+    .hero-card {
+        padding: 15px;
+    }
+    
+    .hero-card i {
+        font-size: 1.5rem;
+    }
+    
+    .service-card {
+        padding: 20px;
+    }
+    
+    .testimonial-item {
+        padding: 20px;
+    }
+    
+    .auth-card {
+        padding: 30px 20px;
+    }
+    
+    .navbar-brand {
+        font-size: 1.5rem;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 375px) {
+    .hero-title {
+        font-size: 1.6rem;
+    }
+    
+    .section-title {
+        font-size: 1.6rem;
+    }
+    
+    .hero-stats {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .service-icon {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .service-icon i {
+        font-size: 2rem;
+    }
+}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Dr. Kundan PhysioCare Patient Portal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Navigation (simplified) -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-bone"></i>
+                <span class="brand-text">Dr. Kundan Physio<span class="brand-highlight">Care</span></span>
+            </a>
+            <a href="index.html" class="btn btn-outline-primary">Back to Home</a>
+        </div>
+    </nav>
+
+    <!-- Login Section -->
+    <section class="auth-container">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-5">
+                    <div class="auth-card">
+                        <div class="auth-logo">
+                            <i class="fas fa-bone"></i>
+                            <h2>Patient Login</h2>
+                            <p class="text-muted">Access your appointments and health records</p>
+                        </div>
+
+                        <form id="loginForm" class="auth-form">
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                                    <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                                    <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
+                                    <button class="btn btn-outline-secondary" type="button" id="togglePassword">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="form-check mb-3">
+                                <input type="checkbox" class="form-check-input" id="rememberMe">
+                                <label class="form-check-label" for="rememberMe">Remember me</label>
+                                <a href="#" class="float-end">Forgot Password?</a>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary w-100 mb-3">
+                                <i class="fas fa-sign-in-alt"></i> Login
+                            </button>
+
+                            <div class="text-center mb-3">
+                                <span class="text-muted">or continue with</span>
+                            </div>
+
+                            <button type="button" class="btn btn-outline-secondary w-100 mb-3 google-login">
+                                <img src="https://www.google.com/favicon.ico" alt="Google" width="20" height="20">
+                                Sign in with Google
+                            </button>
+
+                            <div class="auth-link">
+                                <p>Don't have an account? <a href="register.html">Create Account</a></p>
+                            </div>
+                        </form>
+
+                        <div class="login-info mt-4">
+                            <div class="alert alert-info">
+                                <h6><i class="fas fa-info-circle"></i> New Patient?</h6>
+                                <p class="mb-0">If you're booking an appointment for the first time, you can proceed without registration.</p>
+                                <a href="index.html#appointment" class="btn btn-sm btn-outline-primary mt-2">Book Appointment Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer mt-5">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2025 Dr. Kundan PhysioCare. All Rights Reserved.</p>
+                <p class="disclaimer">Secure login portal for patient management</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/auth.js"></script>
+    <script>
+        // Password visibility toggle
+        document.getElementById('togglePassword').addEventListener('click', function() {
+            const passwordInput = document.getElementById('password');
+            const icon = this.querySelector('i');
+            
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                icon.classList.remove('fa-eye');
+                icon.classList.add('fa-eye-slash');
+            } else {
+                passwordInput.type = 'password';
+                icon.classList.remove('fa-eye-slash');
+                icon.classList.add('fa-eye');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. PhysioCare | Expert Physiotherapy Solutions</title>
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/919304986357" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-bone"></i>
+                <span class="brand-text">Dr. Kundan Physio<span class="brand-highlight">Care</span></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="testimonials.html">Testimonials</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="authDropdown" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-user-circle"></i> Account
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="login.html"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+                            <li><a class="dropdown-item" href="register.html"><i class="fas fa-user-plus"></i> Register</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-calendar-check"></i> My Appointments</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#appointment" class="btn btn-appointment-nav">Book Appointment</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h1 class="hero-title">Experience Complete Healing Through Advanced Physiotherapy</h1>
+                    <p class="hero-subtitle">Dr. PhysioCare provides personalized treatment plans for pain management, injury rehabilitation, and improved mobility using evidence-based techniques.</p>
+                    <div class="hero-buttons">
+                        <a href="#appointment" class="btn btn-primary btn-lg">Book Appointment</a>
+                        <a href="services.html" class="btn btn-outline-primary btn-lg">View Services</a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <h3>3+</h3>
+                            <p>Years Experience</p>
+                        </div>
+                        <div class="stat">
+                            <h3>500+</h3>
+                            <p>Patients Treated</p>
+                        </div>
+                        <div class="stat">
+                            <h3>98%</h3>
+                            <p>Success Rate</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="hero-image-container">
+                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Physiotherapy Treatment" class="hero-image">
+                        <div class="hero-card">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h5>Opening Hours</h5>
+                                <p>Mon-Sat: 9AM-8PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Preview -->
+    <section class="services-preview">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Our Specialized Services</h2>
+            <p class="section-subtitle" data-aos="fade-up">Comprehensive physiotherapy solutions for all your needs</p>
+            
+            <div class="row">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-running"></i>
+                        </div>
+                        <h4>Sports Injury</h4>
+                        <p>Specialized rehabilitation for athletes with advanced recovery protocols.</p>
+                        <a href="services.html#sports" class="service-link">Learn More →</a>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-user-injured"></i>
+                        </div>
+                        <h4>Pain Management</h4>
+                        <p>Effective techniques for chronic pain relief and improved mobility.</p>
+                        <a href="services.html#pain" class="service-link">Learn More →</a>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-wheelchair"></i>
+                        </div>
+                        <h4>Post-Surgical Rehab</h4>
+                        <p>Comprehensive recovery programs after surgical procedures.</p>
+                        <a href="services.html#post-surgical" class="service-link">Learn More →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Appointment Section -->
+    <section id="appointment" class="appointment-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="appointment-card">
+                        <h2 class="section-title">Book Your Appointment</h2>
+                        <p class="section-subtitle">Fill the form below and we'll contact you within 24 hours</p>
+                        
+                        <form id="appointmentForm" class="appointment-form">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="name">Full Name *</label>
+                                        <input type="text" class="form-control" id="name" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="phone">Phone Number *</label>
+                                        <input type="tel" class="form-control" id="phone" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="email">Email Address *</label>
+                                        <input type="email" class="form-control" id="email" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="service">Service Required *</label>
+                                        <select class="form-control" id="service" required>
+                                            <option value="">Select Service</option>
+                                            <option value="consultation">Initial Consultation</option>
+                                            <option value="sports">Sports Injury</option>
+                                            <option value="pain">Pain Management</option>
+                                            <option value="rehab">Rehabilitation</option>
+                                            <option value="home">Home Visit</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="date">Preferred Date *</label>
+                                        <input type="date" class="form-control" id="date" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="time">Preferred Time *</label>
+                                        <select class="form-control" id="time" required>
+                                            <option value="">Select Time</option>
+                                            <option value="9-10">9:00 AM - 10:00 AM</option>
+                                            <option value="10-11">10:00 AM - 11:00 AM</option>
+                                            <option value="11-12">11:00 AM - 12:00 PM</option>
+                                            <option value="2-3">2:00 PM - 3:00 PM</option>
+                                            <option value="3-4">3:00 PM - 4:00 PM</option>
+                                            <option value="4-5">4:00 PM - 5:00 PM</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label for="message">Additional Information</label>
+                                        <textarea class="form-control" id="message" rows="4" placeholder="Describe your condition or specific requirements"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-12 text-center">
+                                    <button type="submit" class="btn btn-primary btn-lg">Book Appointment Now</button>
+                                    <p class="form-note">You'll receive confirmation via email and WhatsApp</p>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Preview -->
+    <section class="testimonials-preview">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">What Our Patients Say</h2>
+            <p class="section-subtitle" data-aos="fade-up">Success stories from our satisfied patients</p>
+            
+            <div class="testimonial-slider">
+                <div class="testimonial-item" data-aos="fade-up">
+                    <div class="testimonial-content">
+                        <p>"Dr. Kundan PhysioCare transformed my life! After a severe sports injury, I was back on the field in 6 weeks. Excellent care and attention!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Rajesh Kumar">
+                        <div>
+                            <h5>Rajesh Kumar</h5>
+                            <span>Professional Athlete</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="testimonial-content">
+                        <p>"Chronic back pain had limited me for years. Thanks to the personalized treatment plan, I'm now pain-free and active!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Priya Sharma">
+                        <div>
+                            <h5>Priya Sharma</h5>
+                            <span>Office Professional</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-content">
+                        <p>"The home visit service was a blessing for my elderly mother. Professional, punctual, and highly effective treatment."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/men/65.jpg" alt="Amit Patel">
+                        <div>
+                            <h5>Amit Patel</h5>
+                            <span>Home Care Client</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="testimonials.html" class="btn btn-outline-primary">View All Testimonials</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="footer-brand">
+                        <i class="fas fa-bone"></i>
+                        <span>Dr. Kundan Physio<span class="brand-highlight">Care</span></span>
+                    </div>
+                    <p class="footer-about">Providing expert physiotherapy services with compassion and evidence-based treatment approaches for over 3+ years.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/share/1FS45RAmFt/" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://x.com/Drkundanku86028?t=JSvtIMVPqDb3k5A5qI4tBA&s=09" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/thakur_kundan_raj?igsh=bXJtN2dxcmw0MGsz" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/dr-kundan-kumar-pt-103579385?utm_source=share_via&utm_content=profile&utm_medium=member_android" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-telegram"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5>Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="testimonials.html">Testimonials</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5>Our Services</h5>
+                    <ul class="footer-links">
+                        <li><a href="services.html#sports">Sports Injury</a></li>
+                        <li><a href="services.html#pain">Pain Management</a></li>
+                        <li><a href="services.html#post-surgical">Post-Surgical Rehab</a></li>
+                        <li><a href="services.html#neurological">Neurological Rehab</a></li>
+                        <li><a href="services.html#home">Home Visits</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h5>Contact Info</h5>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> 303012/302017 Rajasthan, Jaipur City</p>
+                        <p><i class="fas fa-phone"></i> + 91 93049 86357</p>
+                        <p><i class="fas fa-envelope"></i> kk8497131@gmail.com</p>
+                        <p><i class="fas fa-clock"></i> Mon-Sat: 9AM-8PM</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Dr.kundan PhysioCare. All Rights Reserved.</p>
+                <p class="disclaimer">Designed with ❤️ for better healthcare</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+    <script src="js/appointment.js"></script>
+    
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+</body>
+</html>
